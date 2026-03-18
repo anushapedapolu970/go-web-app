@@ -1,0 +1,3 @@
+1. kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+2.kubectl patch svc argocd-server -n argocd -p '{"spec": {"type": "LoadBalancer"}}'
+# we can check svc in argocd namespace will get loadbalncer , this argocd will be deployed in eks cluster.
